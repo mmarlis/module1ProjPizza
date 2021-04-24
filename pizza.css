@@ -1,0 +1,35 @@
+
+body{
+    background-image: url("pizza-making.jpg");
+    background-repeat: no-repeat;
+    background-size: 100em;
+    background-position-x: center ;
+    color: azure;
+}
+
+#container{
+    margin-left: 30em;
+    background-color: #0000;
+    padding: 10px;
+
+}
+
+h1{
+    margin: auto;
+}
+
+nav a {
+    color: azure;
+    font-weight: bold;
+}
+
+.table-dark{
+    background-color: azure;
+    color: black;
+}
+/*.deliveryInfo {*/
+/*    background-color: rgba(76, 175, 80, 0.2);*/
+/*    border-radius: 10px;*/
+/*    padding: 10% 10%;*/
+/*    border-style: solid;*/
+/*}*/

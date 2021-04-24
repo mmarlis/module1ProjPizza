@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pizza Order</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+  <script src="orderForm.js"></script>
+  <link rel="stylesheet" href="pizza.css">
+
+</head>
+<body>
+
+
+ <form id="container">
+
+         <nav>
+        <ul class="nav nav-tabs justify-content-center">
+            <li class="nav-item">
+                <a class="nav-link active navLinks" href="#pizzaDetails">Pizza Details</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link navLinks" href="#deliveryInfo">Delivery</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link navLinks" href="#review">Review Your Order</a>
+            </li>
+        </ul>
+    </nav>
+
+<!--   tabs content>-->
+   <div class="tab-content">
+
+<!--       tab one-->
+       <div id="pizzaDetails" class="tab-pane active">
+     <h1>Nonna's Pizza</h1>
+       <br>
+       <table>
+         <tr>
+          <td>Small</td>
+          <td>$7.00</td>
+         </tr>
+         <tr>
+             <td>Medium</td>
+             <td>$9.00</td>
+         </tr>
+         <tr>
+             <td>Large</td>
+             <td>$12.00</td>
+         </tr>
+         <tr>
+             <td colspan="2">Plus 5.1% Tax</td>
+         </tr>
+         <tr>
+             <td colspan="2">$2.00 Delivery Fee</td>
+         </tr>
+       </table>
+         <br>
+
+               <div class="form-group-sm">
+<!--               <fieldset>-->
+
+                       <h3> Size</h3>
+                       <input type="radio" name="size" value="small" id="size-small" data-price="7" checked>
+                       <label for="size-small">Small</label>
+                       <input type="radio" name="size" value="Medium" id="size-medium" data-price="9">
+                       <label for="size-medium">Medium</label>
+                       <input type="radio" name="size" value="Large" id="size-large" data-price="12">
+                       <label for="size-large">Large</label>
+
+<!--                   </fieldset>-->
+                   <br>
+                 </div>
+
+                    <div class="form-group-sm">
+                    <fieldset>
+
+                       <h3> Crust</h3>
+                       <input type="radio" name="crust" value="Thin" id="thin" checked>
+                       <label for="thin">Thin</label>
+                       <input type="radio" name="crust" value="Pan" id="pan">
+                       <label for="pan">Pan</label>
+                       <input type="radio" name="crust" value="Gluten Free" id="glutenFree">
+                       <label for="glutenFree">Gluten Free</label>
+                 
+           </fieldset>
+               <br>
+                    </div>
+
+                <div class="form">
+               <fieldset>
+                   <h3>Meats &mdash; $1.50 each</h3>
+                   <input type="checkbox" name="meat" value="text" id="pepperoni" data-price="1.5">
+                   <label for="pepperoni">Pepperoni</label>
+                   <input type="checkbox" name="meat" value="text" id="sausage" data-price="1.5">
+                   <label for="sausage">Sausage</label>
+                   <input type="checkbox" name="meat" value="text" id="ham" data-price="1.5">
+                   <label for="ham">Ham</label>
+                   <input type="checkbox" name="meat" value="text" id="chicken" data-price="1.5">
+                   <label for="chicken">Chicken</label>
+                   <input type="checkbox" name="meat" value="text" id="bacon" data-price="1.5">
+                   <label for="bacon">Bacon</label>
+
+                 </fieldset>
+                <br>
+                </div>
+
+                  <div class="form">
+               <fieldset>
+                   <h3>Veggies $1.00 each</h3>
+                   <input type="checkbox" name="veggie" value="text" id="greenPepper" data-price="1">
+                   <label for="greenPepper">Green Pepper</label>
+                   <input type="checkbox" name="veggie" value="text" id="mushroom" data-price="1">
+                   <label for="mushroom">Mushroom</label>
+                   <input type="checkbox" name="veggie" value="text" id="onion" data-price="1">
+                   <label for="onion">Onion</label>
+                   <input type="checkbox" name="veggie" value="text" id="olives" data-price="1">
+                   <label for="olives">Black Olives</label>
+                   <input type="checkbox" name="veggie" value="text" id="artichoke" data-price="1">
+                   <label for="artichoke">Artichoke</label>
+               </fieldset>
+                </div>
+
+           <a class="btn btn-primary btnNext"  id="btnNext1" href="#pizzaDetails">Next</a>
+               </div>
+
+                        <!--       tab two-->
+
+
+          <div id="deliveryInfo" class="tab-pane">
+
+                <h2>Contact Information</h2>
+
+                <div class="form-row ">
+                  <div class="form-group col-md-6">
+                            <label for="inputFullName">Full Name</label>
+                            <input type="text" name="deliveryInfo" class="form-control" id="inputFullName">
+                </div>
+
+                 <div class="form-group col-md-6">
+                     <label for="inputPhone">Phone Number</label>
+                     <input type="text" name="deliveryInfo" class="form-control" id="inputPhone">
+                  </div>
+                  </div>
+
+                        <div class="form-group">
+                        <label for="inputAddress">Address</label>
+                        <input type="text" name="deliveryInfo" class="form-control" id="inputAddress">
+                     </div>
+
+                   <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="inputCity">City</label>
+                        <input type="text" name="deliveryInfo" class="form-control" id="inputCity">
+                     </div>
+
+                     <div class="form-group col-md-4">
+                        <label for="inputState">State</label>
+                        <input type="text" name="deliveryInfo" class="form-control" id="inputState">
+                     </div>
+                    <div class="form-group col-md-2">
+                        <label for="inputZip">Zip</label>
+                        <input type="text" name="deliveryInfo" class="form-control" id="inputZip">
+
+<!--                         <a class="btn btn-primary" id="btnNext2">Next</a>-->
+                                <a class="btn btn-primary btnNext" id="btnNext" href="#deliveryInfo">Next</a>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+        <!-- Tab three -->
+
+
+
+        <div id="review" class="tab-pane">
+
+            <div class="review">
+
+                <h2>Review Your Order</h2>
+                <div class="separator1"></div>
+                
+                  <p id="deliveryOutput"></p>
+                <h4>Order Details</h4>
+
+                <table class="table table-dark ">
+                    <thead>
+                    <tr>
+                        <th scope="col">Item</th>
+                        <th scope="col"><span>Details</span></th>
+                        <th scope="col">Price</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <th scope="row">Size:</th>
+                        <td id="size"></td>
+                        <td id="sizePriceOutput"></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Crust: </th>
+                        <td id="crustTypeOutput"></td>
+                        <td>$0.00</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Meats:</th>
+                        <td id="meatTypeOutput"></td>
+                        <td id="meatsPriceOutput"></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Veggies:</th>
+                        <td id="veggiesOutput"></td>
+                        <td id="veggieTypeOutput"></td>
+                    </tr>
+
+                    <tr>
+                        <th colspan="2" scope=" row">Subtotal:</th>
+                        <td id="subTotalOutput"></td>
+                    </tr>
+
+                    <tr>
+                        <th colspan="2" scope=" row">Tax (5.1%):</th>
+                        <td id="salesTaxOutput"></td>
+
+                    </tr>
+                    <tr>
+                        <th colspan="2" scope=" row">Delivery fees:</th>
+                        <td id="deliveryFeeOutput"></td>
+
+                     </tr>
+
+                     <tr>
+                        <th colspan="2" scope=" row">Total:</th>
+                        <td id="totalOutput"></td>
+
+                        </tr>
+                         <br>
+
+<!--                        <a class="btn btn-primary" id="btnSubmit">Submit</a>-->
+                       <div class="tab-pane" id="tab2">
+
+        <a class="btn btn-primary btnPrev"   id="btnPrevious2" href="#review">Previous</a>
+         <a class="btn btn-primary submit" id="submit" href="#review">Submit Order</a>
+
+                       </div>
+
+                     </table>
+
+         </div>
+                </div>
+            </div>
+ </form>
+
+
+</body>
+
+
+</html>
